@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin(origins = {"http://localhost:4200"})
 @Slf4j
@@ -32,17 +33,16 @@ public class StudentController {
     ClassService classService;
 
     @GetMapping
-    public ResponseEntity<?> listAll(String firstName, String lastName) {
+    public ResponseEntity<?> listAll(Optional<String> firstName, Optional<String> lastName) {
         List<Student> result;
-        if (firstName != null && lastName != null)
-            result = studentService.findByFirstNameAndLastName(firstName, lastName);
-        else if (firstName != null)
-            result = studentService.findByFirstName(firstName);
-        else if (lastName != null)
-            result = studentService.findByLastName(lastName);
+        if (firstName.isPresent() && lastName.isPresent())
+            result = studentService.findByFirstNameAndLastName(firstName.get(), lastName.get());
+        else if (firstName.isPresent())
+            result = studentService.findByFirstName(firstName.get());
+        else if (lastName.isPresent())
+            result = studentService.findByLastName(lastName.get());
         else
             result = studentService.findAll();
-
         return new ResponseEntity<>(ResultResponse.builder().status(true).message(RestConstant.RESPONSE_FIND_SUCCESSFULLY).data(result).build(), HttpStatus.OK);
 
     }

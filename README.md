@@ -5,7 +5,7 @@
 ### Prerequisite And Demo App
 
 To use this project, you are going to need;
-
+    
     Java JDK 8 (1.8) 
     Gradle compatibile with JDK 8
     Any Java IDE (IntelliJ)
@@ -15,10 +15,12 @@ We are going to build a demo app named as test-api. This will be a simple web se
 
 See Swagger documentation at:
 * http://localhost:8080/swagger-ui.html
+### Framework
+For this project 
 
 ### Libraries used
 - Lombook 
-- swagger2
+- Swagger2
 - H2 database
 
 ### About
