@@ -16,8 +16,9 @@ We are going to build a demo app named as test-api. This will be a simple web se
 See Swagger documentation at:
 * http://localhost:8080/swagger-ui.html
 ### Framework
-For this project 
-
+For this project it was used this frameworks:
+- Spring framework (Spring Boot, Spring data)
+- Hibernate
 ### Libraries used
 - Lombook 
 - Swagger2
