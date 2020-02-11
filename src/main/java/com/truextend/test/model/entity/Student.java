@@ -8,6 +8,7 @@ import java.util.Set;
 
 @Getter
 @Setter
+
 @Entity
 @Table(name = "student")
 public class Student {

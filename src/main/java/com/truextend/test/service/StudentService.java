@@ -19,5 +19,5 @@ public interface StudentService {
 
     List<Student> findByLastName(String lastName);
 
-    List<Student> findByLastNameFirstName(String firstName, String lastName);
+    List<Student> findByFirstNameAndLastName(String firstName, String lastName);
 }

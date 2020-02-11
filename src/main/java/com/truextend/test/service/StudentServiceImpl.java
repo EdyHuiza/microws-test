@@ -57,7 +57,7 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     @Transactional(readOnly = true)
-    public List<Student> findByLastNameFirstName(String firstName, String lastName) {
+    public List<Student> findByFirstNameAndLastName(String firstName, String lastName) {
         return studentRepository.findAllByFirstNameAndLastName(firstName, lastName);
     }
 }
