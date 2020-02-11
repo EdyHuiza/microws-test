@@ -13,14 +13,6 @@ To use this project, you are going to need;
 
 We are going to build a demo app named as test-api. This will be a simple web service with basic CRUD operations. I'm going to demonstrate default and external configuration, how to use multiple implementation and autowire them within the code and outside the code with an external configuration file. Our app will be a standalone application that we can use independently, and we are going to use an embedded tomcat, an embedded H2 database.
 
-### How run the project
-
-To run locally:
-* mvn spring-boot:run
-
-To package with dependencies:
-* mvn clean package spring-boot:repackage
-
 See Swagger documentation at:
 * http://localhost:8080/swagger-ui.html
 
